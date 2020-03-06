@@ -306,12 +306,17 @@ map = {
 }
 -- ramc2 = collectgarbage("count")
 -- print("内存占用："..(ramc2-ramc1))
+time1 = os.time()
 astar.map = map
-path = astar:getPath(1,2,0,13,4,6,2)
+for i=1,100 do 
+    path = astar:getPath(1,2,0,13,4,6,2)
+end
+time2 = os.time()
 if path then
-    astar:printMap(path,16,16,8)
+    -- astar:printMap(path,16,16,8)
+    print("done! use:"..(time2-time1))
 else
-    astar:printMap(path,16,16,8)
+    -- astar:printMap(path,16,16,8)
     print("faild!")
 end
 
