@@ -9,8 +9,8 @@ package.path = "test/pathing-oop/?.lua;"..package.path
 -- map = require("util.Map")
 
 astar = require("AstarPathing")
-ramc1 = collectgarbage("count")
-print("初始内存占用："..ramc1)
+-- ramc1 = collectgarbage("count")
+-- print("初始内存占用："..ramc1)
 map = {
     ["0,0,0"]={
         [0]=0,0,0,0,0,0,0,0,
@@ -304,8 +304,8 @@ map = {
         0,0,0,0,0,0,0,0,
     },
 }
-ramc2 = collectgarbage("count")
-print("内存占用："..(ramc2-ramc1))
+-- ramc2 = collectgarbage("count")
+-- print("内存占用："..(ramc2-ramc1))
 astar.map = map
 path = astar:getPath(1,2,0,13,4,6,2)
 if path then

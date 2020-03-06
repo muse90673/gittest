@@ -43,7 +43,7 @@ Astar.girdZ = 8 -- 地图z轴大小
 -- dx,dy,dz:终点坐标
 -- dir:方向
 function Astar:getPath(ox,oy,oz,dx,dy,dz,dir,reverse)
-    ramc1 = collectgarbage("count")
+    -- ramc1 = collectgarbage("count")
     -- init
     local openList = OpenList:new()
     local closeList = CloseList:new()
@@ -80,8 +80,8 @@ function Astar:getPath(ox,oy,oz,dx,dy,dz,dir,reverse)
                     for i=#tempPathList,1,-1 do
                         table.insert(pathList, tempPathList[i])
                     end
-                    ramc2 = collectgarbage("count")
-                    print("寻路内存占用："..(ramc2-ramc1))
+                    -- ramc2 = collectgarbage("count")
+                    -- print("寻路内存占用："..(ramc2-ramc1))
                     return pathList
                 end
             end
